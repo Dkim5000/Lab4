@@ -3,18 +3,71 @@
 
 #include <iostream>
 
-int main()
-{
-    std::cout << "Hello World!\n";
+using namespace std;
+
+// Print out the menu of choices for the user to select from
+void printMenu() {
+	cout << "Please Select which operation to perform:" << endl;
+	cout << "\t1. Factorial" << endl;
+	cout << "\t2. Arithmetic Series" << endl;
+	cout << "\t3. Geometric Series" << endl;
+	cout << "\t4. Exit" << endl;
+	cout << "Your Selection: ";
 }
+void factorial() {
+	int A;
+	cout << "Factorial: " << endl;
+	cout << "Enter a number: ";
+	cin >> A;
+	if (A < 0) {
+		cout << "Nice try, please enter a POSITIVE number...:";
+		cin >> A;
+	}
+	int i;
+	int n;
+	n = 1;
+	cout << "n! = ";
+	for (i = 1; i <= A; i++) {
+		n = i * n;
+		cout << i;
+		if (i < A) {
+			cout << " * ";
+		}
+	}
+}
+void arithmetic() {
+	// I recommend writing your arithmetic series code here
+}
+void geometric() {
+	// I recommend writing your geometric series code here
+}
+int main() {
+	int choice;
+	char again;
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+	do {
+		printMenu();
+		cin >> choice;
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+		// Quit if user chooses to exit (or any invalid choice)
+		if (choice > 3 || choice < 1) {
+			return 0;
+		}
+
+		else if (choice == 1) {
+			factorial();
+		}
+
+		else if (choice == 2) {
+			arithmetic();
+		}
+
+		else if (choice == 3) {
+			geometric();
+		}
+
+		cout << "Go Again? [Y/N] ";
+		cin >> again;
+
+	} while (again == 'y' || again == 'Y');
+}
