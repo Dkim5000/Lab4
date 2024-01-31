@@ -20,7 +20,7 @@ void factorial() {
 	cout << "Enter a number: ";
 	cin >> A;
 	if (A < 0) {
-		cout << "Nice try, please enter a POSITIVE number...:";
+		cout << "Nice try, please enter a POSITIVE number...: ";
 		cin >> A;
 	}
 	int i;
@@ -34,6 +34,7 @@ void factorial() {
 			cout << " * ";
 		}
 	}
+	cout << " = " << n << endl;
 }
 void arithmetic() {
 	// I recommend writing your arithmetic series code here
