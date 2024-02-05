@@ -37,7 +37,11 @@ void factorial() {
 	cout << " = " << n << endl;
 }
 void arithmetic() {
-	// I recommend writing your arithmetic series code here
+	int A;
+	cout << "Arithmetic: " << endl;
+	cout << "Enter a number to start at: ";
+	cin >> A;
+	cout << "Enter a number to add each time: " << endl;
 }
 void geometric() {
 	// I recommend writing your geometric series code here
