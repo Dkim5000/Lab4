@@ -26,7 +26,7 @@ void factorial() {
 	int i;
 	int n;
 	n = 1;
-	cout << "n! = ";
+	cout << A <<"! = ";
 	for (i = 1; i <= A; i++) {
 		n = i * n;
 		cout << i;
@@ -38,13 +38,49 @@ void factorial() {
 }
 void arithmetic() {
 	int A;
-	cout << "Arithmetic: " << endl;
+	cout << "Arithmetic Series: " << endl;
 	cout << "Enter a number to start at: ";
 	cin >> A;
-	cout << "Enter a number to add each time: " << endl;
+	int B;
+	cout << "Enter a number to add each time: ";
+	cin >> B;
+	int C;
+	cout << "Enter the number of elements in the series: ";
+	cin >> C;
+	int sum(0);
+	int i;
+	for (i = 0; i < C; i++) {
+		int element = A + (i * B);
+		if (i > 0) {
+			cout << " + ";
+		}
+		cout << element;
+		sum = sum + element;
+	}
+	cout << " = " << sum << endl;
 }
 void geometric() {
-	// I recommend writing your geometric series code here
+	int A;
+	cout << "Geometric Series: " << endl;
+	cout << "Enter a number to start at: ";
+	cin >> A;
+	int B;
+	cout << "Enter a number to multiply by each time: ";
+	cin >> B; 
+	int C; 
+	cout << "Enter the number of elements in the series: ";
+	cin >> C; 
+	int sum(0);
+	int i;
+	for (i = 0; i < C; i++) {
+		int element = A * (pow(B, i));
+		if (i > 0) {
+			cout << " + ";
+		}
+		cout << element;
+		sum = sum + element;
+	}
+	cout << " = " << sum << endl;
 }
 int main() {
 	int choice;
